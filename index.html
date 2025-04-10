@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Estudiantes - CETCR</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+    }
+
+    header {
+      background: #3b5998;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      background: #333;
+      overflow: hidden;
+    }
+
+    nav .menu {
+      display: flex;
+      flex-direction: column;
+      background-color: #333;
+      display: none;
+    }
+
+    nav .menu a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    nav .menu a:hover {
+      background-color: #575757;
+    }
+
+    nav .hamburger {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      cursor: pointer;
+      text-align: right;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2d4373;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      color: #3b5998;
+      font-size: 2rem;
+    }
+
+    footer {
+      background-color: orange;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    @media(min-width: 600px) {
+      nav .menu {
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+      }
+
+      nav .hamburger {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="flex flex-col items-center justify-center p-6 animate-fade-in-down">
+    <img src="/assets/logo_centro.jpg" alt="Logo CETCR" style="max-width: 150px; animation: fadeIn 2s;">
+    <h1>Centro de Estudiantes - CETCR</h1>
+    <h2>IES - Integración de las Américas</h2>
+  </header>
+
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">☰ Menú</div>
+    <div class="menu" id="menu">
+      <a href="#">Inicio</a>
+      <a href="#quienes-somos">Quiénes somos</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="inicio" class="p-8 bg-white text-gray-800">
+        <h2 class="text-2xl font-bold mb-4">Bienvenidos al Centro de Estudiantes CETCR</h2>
+        <p class="mb-4">
+          Nos enorgullece presentar por primera vez en la historia de nuestra institución el <strong>Centro de Estudiantes del IES - Integración de las Américas</strong>. Esta iniciativa nace con el objetivo de representar la voz de cada alumno, fomentar la participación activa en la vida institucional, y promover un ambiente de respeto, cooperación y crecimiento conjunto.
+        </p>
+        <p>
+          Este espacio será un puente entre los estudiantes y las autoridades institucionales, donde podrás canalizar inquietudes, propuestas y proyectos. ¡Sos parte fundamental de este nuevo comienzo! Tu participación es clave para construir una comunidad educativa más fuerte, unida y participativa.
+        </p>
+      </section>
+      <section id="quienes-somos" class="p-8 bg-gray-50 text-gray-800">
+        <h2 class="text-2xl font-bold mb-4">¿Quiénes somos?</h2>
+        <p class="mb-4">
+          Somos un grupo de estudiantes comprometidos con la mejora de la experiencia académica y social de nuestra institución. El Centro de Estudiantes CETCR está conformado por alumnos y alumnas, unidos por el deseo de generar cambios positivos, promover valores democráticos y brindar un espacio seguro y participativo para todos.
+        </p>
+        <p class="mb-6">
+          Nuestra misión es defender los derechos del alumnado, acompañar sus necesidades y ser un canal de diálogo efectivo con las autoridades.
+        </p>
+        <img src="/assets/tarjdepresentacin/tarjeta01.jpg" width="200px">
+        <p>Gabriel Agustín Jiménez</p>
+        <img src="/assets/tarjdepresentacin/tarjeta02.jpg" width="200px">
+        <p>Ma. Lorena del Valle Cabrera Singh</p>
+        <img src="/assets/tarjdepresentacin/tarjetadelegado01.jpg" width="200px">
+        <p>Adrián Enrique Albornoz</p>
+        <img src="/assets/tarjdepresentacin/tarjetadelegado02.jpg" width="200px">
+        <p>Tamara Britos</p>
+        <img src="/assets/tarjdepresentacin/tarjetadelegado03.jpg" width="200px">
+        <p>José Grabriel Cruz</p>
+        <img src="/assets/tarjdepresentacin/tarjetadelegado04.jpg" width="200px">
+        <p>Ricardo Miguel A. Escobar</p>
+        <!-- Aquí podés reemplazar la imagen con la de tu grupo -->
+        
+      </section>
+
+      <section id="objetivos" class="p-8 bg-white text-gray-800">
+        <h2 class="text-2xl font-bold mb-4">Nuestros Objetivos</h2>
+        <ul class="list-disc ml-6 mb-6">
+          <li>Representar los intereses del estudiantado ante las autoridades institucionales.</li>
+          <li>Fomentar la participación activa de los alumnos en la vida académica y social.</li>
+          <li>Promover el respeto, la equidad y la inclusión en todos los ámbitos del IES.</li>
+          <li>Canalizar propuestas, sugerencias y reclamos de forma constructiva y democrática.</li>
+          <li>Organizar actividades culturales, recreativas, académicas y solidarias.</li>
+        </ul>
+      
+        <h3 class="text-xl font-semibold mb-2">Nuestras Metas</h3>
+        <ul class="list-disc ml-6 mb-6">
+          <li>Crear espacios de escucha activa y diálogo permanente.</li>
+          <li>Conformar comisiones de trabajo estudiantil en áreas clave.</li>
+          <li>Gestionar recursos y mejoras para las instalaciones y herramientas de estudio.</li>
+          <li>Fortalecer la identidad estudiantil y la integración entre carreras.</li>
+        </ul>
+      
+        <h3 class="text-xl font-semibold mb-2">¿Por qué unirte al Centro de Estudiantes?</h3>
+        <ul class="list-disc ml-6">
+          <li>Podés hacer valer tu voz en las decisiones institucionales.</li>
+          <li>Accedés a espacios de formación, participación y liderazgo.</li>
+          <li>Contribuís a mejorar la calidad educativa para todos.</li>
+          <li>Formás parte de una comunidad comprometida con el cambio y la solidaridad.</li>
+        </ul>
+      </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form onsubmit="return validarFormulario()" action="mailto:cetcr.ies@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+        <input type="submit" value="Enviar">
+      </form>
+
+      <div class="social-icons">
+        <a href="https://arhinsingh05.github.io/ies_Integracion_america/index.html"><img src="/assets/logo_institucion.jpg" width="32px"  class="fab fa-facebook"></img></a>
+        <a href="https://www.instagram.com/ies_integracion_america.ald/?igsh=YzljYTk1ODg3Zg%3D%3D#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:cetcr.ies@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href=""><img src="/assets/logo_empresa.jpg" width="32px"></a>
+    @ReinArhiN - Reservados todos los derechos <a href="https://wa.me/5493815995591?textMe%20Hola%20a%20%la%20brevedad%20respondere%20su%20consulta%20" class="social-link"><img src="/assets/icons8-whatsapp-144.svg" width="32px" alt="número whatapp de ReinArhiN">
+    </a>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function validarFormulario() {
+      const email = document.getElementById('email').value;
+      const regex = /^\S+@\S+\.\S+$/;
+      if (!regex.test(email)) {
+        alert("Por favor, ingresa un correo válido.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>
